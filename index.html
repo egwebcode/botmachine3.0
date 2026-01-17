@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOT MACHINE 3.0 - Lançamento Oficial</title>
+    <meta name="description" content="Garanta sua vaga no Bot Machine 3.0. A revolução da automação.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neon: {
+                DEFAULT: '#00ff41',
+                dark: '#008F11',
+                glow: 'rgba(0, 255, 65, 0.5)'
+              },
+              dark: {
+                900: '#0a0a0a',
+                800: '#121212',
+                700: '#1a1a1a'
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #050505;
+        color: #ffffff;
+      }
+      .neon-text {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+      }
+      .neon-border {
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121212; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #008F11; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00ff41; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="overflow-x-hidden">
+    
+    <!-- Notification Bar -->
+    <div class="bg-neon text-black text-center py-2 text-xs md:text-sm font-bold uppercase tracking-widest px-2">
+      ⚡ Lançamento Oficial 2026 - Últimas vagas por R$ 199,90
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-black/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black italic tracking-tighter text-white">
+          BOT<span class="text-neon">MACHINE</span><span class="text-xs ml-1 align-top bg-white/10 px-1 rounded">3.0</span>
+        </div>
+        
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="#features" class="hover:text-neon transition-colors">Funcionalidades</a>
+          <a href="#testimonials" class="hover:text-neon transition-colors">Depoimentos</a>
+          <a href="#faq" class="hover:text-neon transition-colors">Dúvidas</a>
+        </div>
+
+        <div class="hidden md:block">
+          <a href="#pricing" class="border border-neon text-neon hover:bg-neon hover:text-black font-bold py-2 px-6 rounded transition-all text-sm uppercase">
+            Acessar Painel
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-white">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-b border-white/10 absolute w-full left-0 top-full p-4 flex flex-col gap-4 shadow-2xl">
+        <a href="#features" class="text-white block py-2 border-b border-white/5">Funcionalidades</a>
+        <a href="#testimonials" class="text-white block py-2 border-b border-white/5">Depoimentos</a>
+        <a href="#faq" class="text-white block py-2 border-b border-white/5">Dúvidas</a>
+        <a href="#pricing" class="bg-neon text-black font-bold py-3 px-4 rounded text-center uppercase block">Comprar Agora</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative py-16 md:py-24 px-4 overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10"></div>
+        <img src="https://picsum.photos/1920/1080?grayscale&blur=2" class="w-full h-full object-cover opacity-10" alt="Background">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-neon/20 blur-[100px] rounded-full pointer-events-none"></div>
+      </div>
+
+      <div class="container mx-auto relative z-10 text-center max-w-4xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1 mb-8 animate-float">
+          <span class="w-2 h-2 bg-neon rounded-full animate-pulse"></span>
+          <span class="text-xs md:text-sm font-semibold text-neon uppercase">Tecnologia 2026 Revelada</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight">
+          A NOVA ERA DA <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">AUTOMAÇÃO</span> <span class="text-neon neon-text">CHEGOU</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Descubra o <strong>Bot Machine 3.0</strong>. O único sistema capaz de gerar resultados consistentes automaticamente enquanto você vive sua vida.
+        </p>
+
+        <!-- Scarcity Bar -->
+        <div class="max-w-md mx-auto bg-dark-800 p-4 rounded-xl border border-white/10 mb-8">
+          <div class="flex justify-between items-center mb-2 text-sm md:text-base">
+            <span class="text-gray-400">Vagas promocionais restantes:</span>
+            <span id="slots-count" class="text-neon font-bold text-xl">17</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+            <div id="slots-bar" class="bg-gradient-to-r from-neon-dark to-neon h-3 rounded-full transition-all duration-1000" style="width: 83%"></div>
+          </div>
+          <p class="text-xs text-center text-gray-500 mt-2">
+            🔥 <span class="text-white font-semibold">12 pessoas</span> estão comprando agora.
+          </p>
+        </div>
+
+        <div class="max-w-md mx-auto">
+          <a href="#pricing" class="group bg-gradient-to-r from-neon-dark to-neon text-black font-black py-4 px-8 rounded-lg transform transition-all duration-200 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,255,65,0.6)] flex items-center justify-center gap-3 text-lg md:text-xl uppercase tracking-wider animate-pulse-fast">
+            <span>Quero Acesso Antecipado</span>
+            <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <p class="mt-4 text-xs text-gray-500 flex items-center justify-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-neon"></i> 
+            Compra 100% Segura • Acesso Imediato
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- VSL Placeholder -->
+    <img src="logo.jpg" >
+    <!-- Features -->
+    <section id="features" class="py-20 bg-black">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Por que o <span class="text-neon">Bot Machine 3.0</span>?</h2>
+          <p class="text-gray-400">Tecnologia superior a tudo que você já viu no mercado.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Feature 1 -->
+          <div class="bg-dark-800 p-6 rounded-2xl border border-white/5 hover:border-neon/30 transition-colors group">
+            <div class="w-12 h-12 bg-dark-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neon/10 transition-colors">
+              <i data-lucide="zap" class="text-neon w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Instalação Relâmpago</h3>
+            <p class="text-gray-400 text-sm">Sistema Plug & Play. Baixou, ativou, lucrou. Sem configurações complexas.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="bg-dark-800 p-6 rounded-2xl border border-white/5 hover:border-neon/30 transition-colors group">
+            <div class="w-12 h-12 bg-dark-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neon/10 transition-colors">
+              <i data-lucide="bar-chart-3" class="text-neon w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Alta Assertividade</h3>
+            <p class="text-gray-400 text-sm">Algoritmo treinado com IA de última geração (2026 Tech) para maximizar ganhos.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="bg-dark-800 p-6 rounded-2xl border border-white/5 hover:border-neon/30 transition-colors group">
+            <div class="w-12 h-12 bg-dark-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neon/10 transition-colors">
+              <i data-lucide="shield-check" class="text-neon w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Segurança Total</h3>
+            <p class="text-gray-400 text-sm">Criptografia de ponta a ponta. Seus dados e seu saldo 100% protegidos.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="bg-dark-800 p-6 rounded-2xl border border-white/5 hover:border-neon/30 transition-colors group">
+            <div class="w-12 h-12 bg-dark-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neon/10 transition-colors">
+              <i data-lucide="smartphone" class="text-neon w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">100% Mobile</h3>
+            <p class="text-gray-400 text-sm">Opere direto do seu celular, tablet ou computador. Onde você estiver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-dark-900 relative">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Quem comprou, <span class="text-neon">aprovou</span></h2>
+          <div class="flex justify-center gap-1 text-yellow-500 mb-2">
+            <i data-lucide="star" class="fill-current w-5 h-5"></i>
+            <i data-lucide="star" class="fill-current w-5 h-5"></i>
+            <i data-lucide="star" class="fill-current w-5 h-5"></i>
+            <i data-lucide="star" class="fill-current w-5 h-5"></i>
+            <i data-lucide="star" class="fill-current w-5 h-5"></i>
+          </div>
+          <p class="text-gray-400">Mais de 5.000 alunos faturando todos os dias.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- T1 -->
+          <div class="bg-black p-8 rounded-2xl border border-white/10 relative">
+            <div class="absolute -top-4 left-8 text-6xl text-neon opacity-20 font-serif">"</div>
+            <p class="text-gray-300 mb-6 relative z-10">Eu não acreditava muito em bots, mas o Bot Machine 3.0 mudou meu jogo. Em 2 dias paguei o investimento e já estou no lucro. A precisão é absurda.</p>
+            <div class="flex items-center gap-4">
+              <img src="https://i.pinimg.com/236x/99/3c/3e/993c3e2a32766307912701eb17d2fb48.jpg" alt="User" class="w-12 h-12 rounded-full border-2 border-neon">
+              <div>
+                <h4 class="font-bold text-white">Carlos Eduardo</h4>
+                <p class="text-xs text-neon">Trader Profissional</p>
+              </div>
+            </div>
+          </div>
+          <!-- T2 -->
+          <div class="bg-black p-8 rounded-2xl border border-white/10 relative">
+            <div class="absolute -top-4 left-8 text-6xl text-neon opacity-20 font-serif">"</div>
+            <p class="text-gray-300 mb-6 relative z-10">O suporte é incrível e a configuração é muito fácil. Mesmo sem entender de programação, consegui ligar tudo em 10 minutos. Recomendo demais!</p>
+            <div class="flex items-center gap-4">
+              <img src="https://i.pinimg.com/236x/e9/cc/9b/e9cc9b644a55be7319157fa4e6c2fd5f.jpg" alt="User" class="w-12 h-12 rounded-full border-2 border-neon">
+              <div>
+                <h4 class="font-bold text-white">Fernando Lima</h4>
+                <p class="text-xs text-neon">Empreendedor</p>
+              </div>
+            </div>
+          </div>
+          <!-- T3 -->
+          <div class="bg-black p-8 rounded-2xl border border-white/10 relative">
+            <div class="absolute -top-4 left-8 text-6xl text-neon opacity-20 font-serif">"</div>
+            <p class="text-gray-300 mb-6 relative z-10">Já testei vários do mercado, mas esse lançamento de 2026 veio de outro mundo. O algoritmo antecipa movimentos que nenhum outro vê.</p>
+            <div class="flex items-center gap-4">
+              <img src="https://i.pinimg.com/236x/d4/b4/c0/d4b4c0a6a07e0ffe599a1a37f20ba095.jpg" alt="User" class="w-12 h-12 rounded-full border-2 border-neon">
+              <div>
+                <h4 class="font-bold text-white">Ricardo Mendes</h4>
+                <p class="text-xs text-neon">Investidor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 bg-gradient-to-b from-black to-dark-900 relative overflow-hidden">
+      <!-- Glows -->
+      <div class="absolute top-0 right-0 w-64 h-64 bg-neon/10 blur-[100px] rounded-full"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-md mx-auto bg-dark-800 rounded-3xl overflow-hidden border-2 border-neon shadow-[0_0_50px_rgba(0,255,65,0.15)] transform hover:-translate-y-2 transition-transform duration-300">
+          <!-- Header -->
+          <div class="bg-neon p-4 text-center">
+            <span class="text-black font-extrabold tracking-widest uppercase text-sm">Oferta de Lançamento 2026</span>
+          </div>
+          
+          <div class="p-8 text-center">
+            <h3 class="text-3xl font-black text-white mb-2">PAINEL COMPLETO</h3>
+            <p class="text-gray-400 text-sm mb-6">Acesso vitalício ao Bot Machine 3.0</p>
+            
+            <div class="flex items-center justify-center gap-3 mb-2">
+              <span class="text-gray-500 line-through text-lg">R$ 599,00</span>
+              <span class="bg-red-500/20 text-red-500 text-xs font-bold px-2 py-1 rounded">PROMOÇÃO</span>
+            </div>
+            
+            <div class="flex items-center justify-center items-baseline mb-8">
+              <span class="text-sm text-gray-400 mr-2">Por apenas</span>
+              <span class="text-5xl font-black text-white">R$ 199,90</span>
+            </div>
+            
+            <div class="text-sm text-gray-400 mb-8">
+              Pagamento único. Sem mensalidades.
+            </div>
+
+            <ul class="text-left space-y-4 mb-8 text-gray-300">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="text-neon flex-shrink-0 w-5 h-5"></i>
+                <span>Licença Vitalícia 3.0</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="text-neon flex-shrink-0 w-5 h-5"></i>
+                <span>Acesso ao Grupo VIP</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="text-neon flex-shrink-0 w-5 h-5"></i>
+                <span>Atualizações 2026 Gratuitas</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="text-neon flex-shrink-0 w-5 h-5"></i>
+                <span>Bônus: Estratégias Secretas</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="text-neon flex-shrink-0 w-5 h-5"></i>
+                <span>Suporte Premium 24/7</span>
+              </li>
+            </ul>
+
+            <a href="https://www.google.com" class="block w-full bg-gradient-to-r from-neon-dark to-neon text-black font-bold py-4 px-8 rounded-lg transform transition-all duration-200 hover:scale-105 shadow-lg text-lg uppercase tracking-wider animate-pulse-fast mb-4">
+              COMPRAR AGORA
+            </a>
+            
+            <div class="flex items-center justify-center gap-4 opacity-50">
+              <i data-lucide="credit-card" class="w-6 h-6"></i>
+              <div class="text-xs text-left">
+                <p>Pagamento Seguro</p>
+                <p>SSL Encrypted</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-8">
+          <p class="text-red-500 font-bold animate-pulse flex items-center justify-center gap-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+            Atenção: Preço válido apenas para as primeiras 100 pessoas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="py-16 bg-white text-black">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+          <div class="flex-shrink-0">
+             <div class="w-40 h-40 relative flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-[160px] h-[160px] text-black stroke-[1px]"></i>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center pt-4">
+                  <span class="font-black text-3xl">7</span>
+                  <span class="font-bold text-xs uppercase leading-none">Dias de<br/>Garantia</span>
+                </div>
+             </div>
+          </div>
+          <div class="text-center md:text-left">
+            <h3 class="text-3xl font-black mb-4 uppercase">Risco Zero: Lei do Consumidor</h3>
+            <p class="text-gray-800 text-lg mb-4">
+              Você tem 7 dias para testar o Bot Machine 3.0. Se não gostar, se não lucrar ou se simplesmente não for com a minha cara, nós devolvemos 100% do seu dinheiro.
+            </p>
+            <p class="font-semibold underline">Sem perguntas, sem letras miúdas. É a lei.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-dark-900">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+        <div class="space-y-4" id="faq-container">
+          
+          <details class="group bg-black border border-white/10 rounded-lg overflow-hidden">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold hover:text-neon transition-colors list-none">
+              Funciona para iniciantes?
+              <i data-lucide="chevron-down" class="transform group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+              Sim! O Bot Machine 3.0 foi desenhado para quem nunca operou. Temos tutoriais passo a passo.
+            </div>
+          </details>
+
+          <details class="group bg-black border border-white/10 rounded-lg overflow-hidden">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold hover:text-neon transition-colors list-none">
+              Preciso deixar o PC ligado?
+              <i data-lucide="chevron-down" class="transform group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+              Não. Nosso sistema opera na nuvem 24/7. Você ativa e ele trabalha para você.
+            </div>
+          </details>
+
+          <details class="group bg-black border border-white/10 rounded-lg overflow-hidden">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold hover:text-neon transition-colors list-none">
+              E se eu não gostar?
+              <i data-lucide="chevron-down" class="transform group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+              Você tem 7 dias de garantia incondicional protegida por lei. Devolvemos 100% do seu dinheiro.
+            </div>
+          </details>
+
+          <details class="group bg-black border border-white/10 rounded-lg overflow-hidden">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold hover:text-neon transition-colors list-none">
+              Como recebo o acesso?
+              <i data-lucide="chevron-down" class="transform group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+              Imediatamente após a confirmação do pagamento, você recebe os dados de acesso no seu e-mail cadastrado.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10 text-sm text-gray-500">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div class="col-span-1 md:col-span-2">
+            <div class="text-2xl font-black italic tracking-tighter text-white mb-4">
+              BOT<span class="text-neon">MACHINE</span>
+            </div>
+            <p class="max-w-xs mb-6">
+              A ferramenta oficial para automação de resultados. Lançamento oficial da versão 3.0 em 2026.
+            </p>
+            <div class="flex gap-4">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+              <span>Site 100% Seguro</span>
+            </div>
+          </div>
+      
+          <div>
+            <h4 class="text-white font-bold mb-4 uppercase tracking-wider">SOBRE SUPORTE</h4>
+            <ul class="space-y-2">
+              
+              <li>Atendimento 24 horas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center pt-8 border-t border-white/5">
+          <p>&copy; 2026 Bot Machine 3.0 Todos os direitos reservados.</p>
+          <p class="mt-2 text-xs opacity-50">
+            Os resultados podem variar de pessoa para pessoa. Este produto não garante a obtenção de resultados financeiros.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 w-full p-4 bg-black/90 backdrop-blur border-t border-white/10 z-40 transition-transform duration-300 translate-y-full md:hidden">
+      <a href="#pricing" class="block w-full bg-gradient-to-r from-neon-dark to-neon text-black font-bold py-3 rounded-lg text-center uppercase shadow-lg animate-pulse-fast">
+        Comprar por R$ 199,90
+      </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Mobile Menu Logic
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Toggle icon (optional, simple logic)
+        const icon = menuBtn.querySelector('svg');
+        // In a real Lucide setup via CDN, we might need to re-render, but usually we just toggle class
+      });
+
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Sticky CTA Logic
+      const stickyCTA = document.getElementById('sticky-cta');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+          stickyCTA.classList.remove('translate-y-full');
+        } else {
+          stickyCTA.classList.add('translate-y-full');
+        }
+      });
+
+      // Scarcity/Countdown Logic
+      let spots = 17;
+      const slotsCount = document.getElementById('slots-count');
+      const slotsBar = document.getElementById('slots-bar');
+      
+      const updateDisplay = () => {
+        if(slotsCount) slotsCount.innerText = `${spots} de 100`;
+        if(slotsBar) {
+          const percentage = ((100 - spots) / 100) * 100;
+          slotsBar.style.width = `${percentage}%`;
+        }
+      };
+
+      const interval = setInterval(() => {
+        if (spots <= 3) {
+          spots = 3;
+          updateDisplay();
+          // clearInterval(interval); // Keep it running to seem active, but stuck at 3
+          return;
+        }
+        if (Math.random() > 0.6) {
+          spots--;
+          updateDisplay();
+        }
+      }, 8000); // Update every 8 seconds
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
